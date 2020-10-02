@@ -25,7 +25,7 @@ SECRET_KEY = 'u58a5_ruwacj!x&ux($2nn$9$y75vq2!=7w$@sofi601eggi^q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'aragossa-dev.site', 'www.aragossa-dev.site']
 
 
 # Application definition
