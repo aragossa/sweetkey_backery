@@ -1,0 +1,12 @@
+
+{% extends 'mainApp/wrapper.html' %}
+{% block content %}
+<div class="container" mt-5>
+
+    {% for prod in products %}
+        <div>{{ prod.prod_name }}</div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

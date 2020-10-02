@@ -1,0 +1,18 @@
+
+{% extends 'mainApp/wrapper.html' %}
+{% block content %}
+<div class="container" mt-5>
+
+
+    {% for subcat in subcategories %}
+        <div>{{ subcat.sub_cat_name }}</div>
+    {% endfor %}
+
+
+    {% for prod in products %}
+        <div>{{ prod.prod_name }}</div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

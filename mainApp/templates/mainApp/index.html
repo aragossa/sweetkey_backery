@@ -1,0 +1,11 @@
+
+{% extends 'mainApp/wrapper.html' %}
+{% block content %}
+<div class="container" mt-5>
+{% for cat in categories %}
+    <div>{{ cat.cat_name }}
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
