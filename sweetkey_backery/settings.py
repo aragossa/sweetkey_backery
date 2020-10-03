@@ -11,13 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from configParser import configParser
-
-# cfg = configParser.config()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+from configParser import configParser
+
+cfg = configParser.config(filename=os.path.join(BASE_DIR, 'db.ini'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -29,7 +29,6 @@ SECRET_KEY = 'u58a5_ruwacj!x&ux($2nn$9$y75vq2!=7w$@sofi601eggi^q'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'aragossa-dev.site', 'www.aragossa-dev.site', 'localhost']
-
 
 # Application definition
 
@@ -73,24 +72,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sweetkey_backery.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': cfg.get('database'),
-        # 'USER': cfg.get('user'),
-        # 'PASSWORD': cfg.get('password'),
-        # 'HOST': cfg.get('host'),
-        'NAME': 'u1167630_default',
-        'USER': 'u1167630_default',
-        'PASSWORD': '_5oJzo3x',
-        'HOST': 'localhost',
+        'NAME': cfg.get('database'),
+        'USER': cfg.get('user'),
+        'PASSWORD': cfg.get('password'),
+        'HOST': cfg.get('host'),
+        # 'NAME': 'u1167630_default',
+        # 'USER': 'u1167630_default',
+        # 'PASSWORD': '_5oJzo3x',
+        # 'HOST': 'localhost',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -110,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -124,15 +120,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-#test
-# STATIC_ROOT = 'static/'
+# test
+STATIC_ROOT = 'static/'
 
-#dev
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+# dev
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+# )
