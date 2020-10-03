@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'u1167630_default',
         'USER': 'u1167630_default',
         'PASSWORD': '_5oJzo3x',
-        'HOST': 'localgost',
+        'HOST': 'localhost',
     }
 }
 
