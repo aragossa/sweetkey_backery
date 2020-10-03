@@ -1,11 +1,58 @@
-
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
-<div class="container" mt-5>
-{% for cat in categories %}
-    <div>{{ cat.cat_name }}
+
+
+
+
+    <div class="node node17 section section-clear" data-opacity="0.95">
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div class="container">
+                    <div class="cont">
+                        <div class="node node18 widget widget-menu">
+                            <div class="wrapper1">
+                                <div class="wrapper2">
+                                    <div class="w-menu-grid center">
+
+
+                                        {% for cat in categories %}
+                                            <div class="w-menu-grid__cell"
+                                                 style="padding-left: 5px; padding-right: 5px;">
+                                                <div class="cont cell">
+                                                    <div class="node node20 widget widget-menu-button">
+                                                        <div class="wrapper1">
+                                                            <div class="wrapper2">
+                                                                <div class="macros-button">
+                                                                    <div class="btn-out center xs-none"><a
+                                                                            class="btn-inner"
+                                                                            href="https://корица24.рф/klubnika"
+                                                                            target="_self">
+
+                                                                        <button class="btn font-text" id="uid16"
+                                                                                data-id=""
+                                                                                data-action="link" data-ym_goal=""
+                                                                                data-ga_category="" data-ga_action=""
+                                                                                need_hover="true"><img
+                                                                                src="//u10.plpstatic.ru/c98d35d8d7840318adcb26b7f3d8c2be/ed64ddddc114d6487924b5b4a375a62d.jpg"
+                                                                                style="width: 309.12px;" class="">
+                                                                        </button>
+                                                                    </a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="plplink"></span></div>
+        </div>
     </div>
-{% endfor %}
-</div>
 
 {% endblock %}

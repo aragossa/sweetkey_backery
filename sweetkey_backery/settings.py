@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from configParser import configParser
+
+cfg = configParser.config()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +28,7 @@ SECRET_KEY = 'u58a5_ruwacj!x&ux($2nn$9$y75vq2!=7w$@sofi601eggi^q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'aragossa-dev.site', 'www.aragossa-dev.site']
+ALLOWED_HOSTS = ['127.0.0.1', 'aragossa-dev.site', 'www.aragossa-dev.site', 'localhost']
 
 
 # Application definition
@@ -75,17 +78,25 @@ WSGI_APPLICATION = 'sweetkey_backery.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u1167630_default',
-        'USER': 'u1167630_default',
-        'PASSWORD': '_5oJzo3x',
-        'HOST': 'localhost',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'u1167630_default',
+    #     'USER': 'u1167630_default',
+    #     'PASSWORD': '_5oJzo3x',
+    #     'HOST': 'localhost',
+    # }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': cfg.get('database'),
+        'USER': cfg.get('user'),
+        'PASSWORD': cfg.get('password'),
+        'HOST': cfg.get('host'),
+    }
 }
 
 
@@ -126,4 +137,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+#test
+# STATIC_ROOT = 'static/'
+
+#dev
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
