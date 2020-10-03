@@ -78,18 +78,6 @@ WSGI_APPLICATION = 'sweetkey_backery.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'u1167630_default',
-    #     'USER': 'u1167630_default',
-    #     'PASSWORD': '_5oJzo3x',
-    #     'HOST': 'localhost',
-    # }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': cfg.get('database'),
@@ -138,9 +126,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #test
-# STATIC_ROOT = 'static/'
+STATIC_ROOT = 'static/'
 
 #dev
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+# )
