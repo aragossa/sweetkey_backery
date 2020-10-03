@@ -80,10 +80,14 @@ WSGI_APPLICATION = 'sweetkey_backery.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': cfg.get('database'),
-        'USER': cfg.get('user'),
-        'PASSWORD': cfg.get('password'),
-        'HOST': cfg.get('host'),
+        # 'NAME': cfg.get('database'),
+        # 'USER': cfg.get('user'),
+        # 'PASSWORD': cfg.get('password'),
+        # 'HOST': cfg.get('host'),
+        'NAME': 'u1167630_default',
+        'USER': 'u1167630_default',
+        'PASSWORD': '_5oJzo3x',
+        'HOST': 'localgost',
     }
 }
 
