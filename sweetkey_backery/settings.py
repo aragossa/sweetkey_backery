@@ -125,10 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # test
-STATIC_ROOT='static/'
+# STATIC_ROOT='static/'
 
 # dev
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static"),
-#     '/var/www/u1167630/data/www/aragossa-dev.site/sweetkey_backery/static/'
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
