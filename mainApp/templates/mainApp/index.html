@@ -27,15 +27,17 @@
                                                                             class="btn-inner"
                                                                             href="{{ cat.cat_name }}"
                                                                             target="_self">
-
+                                                                        {% load static %}
+                                                                        {% with "pics/"|add:cat.cat_pic_name|add:".png" as cat_pic_name %}
                                                                         <button class="btn font-text" id="uid16"
                                                                                 data-id=""
                                                                                 data-action="link" data-ym_goal=""
                                                                                 data-ga_category="" data-ga_action=""
                                                                                 need_hover="true"><img
-                                                                                src="//u10.plpstatic.ru/c98d35d8d7840318adcb26b7f3d8c2be/ed64ddddc114d6487924b5b4a375a62d.jpg"
+                                                                                src="{% static cat_pic_name %}"
                                                                                 style="width: 309.12px;" class="">
                                                                         </button>
+                                                                        {% endwith %}
                                                                     </a></div>
                                                                 </div>
                                                             </div>
