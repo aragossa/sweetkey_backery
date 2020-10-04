@@ -14,6 +14,7 @@ class Products(models.Model):
 
 class Category(models.Model):
     cat_name = models.TextField(verbose_name='cat_name')
+    cat_pic_name = models.TextField(verbose_name='cat_pic_name')
 
     def __str__(self):
         return self.cat_name
@@ -22,6 +23,7 @@ class Category(models.Model):
 class SubCategory(models.Model):
     sub_cat_name = models.TextField(verbose_name='sub_cat_name')
     cat_name = models.TextField(verbose_name='cat_name')
+    sub_cat_pic_name = models.TextField(verbose_name='sub_cat_pic_name')
 
     def __str__(self):
         return self.sub_cat_name
