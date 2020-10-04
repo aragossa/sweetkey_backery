@@ -1,7 +1,50 @@
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
 
+    <div class="node node0 section section-clear" id="main" data-opacity="0.95">
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div class="container">
+                    <div class="cont">
 
+                        <div class="node node11 widget widget-text">
+                            <div class="wrapper1">
+                                <div class="wrapper2">
+                                    <div class="xs-scale-80">
+                                        <h1 class="font-header spans xs-force-center textable"><span
+                                                style="text-align: center;" class="p"><span
+                                                style="color: rgb(48, 0, 74);"><span style="font-size: 64px;"><span
+                                                style="font-family: &quot;Beer Money&quot;;">Мастерская оригинальных подарков&nbsp;</span></span><div></div><div></div></span></span><span
+                                                style="text-align: center;" class="p"><span
+                                                style="color: rgb(48, 0, 74);"><span style="font-size: 64px;"><span
+                                                style="font-family: &quot;Beer Money&quot;;">"Sweetkey"</span></span></span></span>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="node node12 widget widget-text">
+                            <div class="wrapper1">
+                                <div class="wrapper2">
+                                    <div class=""><h2 class="spans xs-force-center textable"><span
+                                            style="text-align: center;" class="p"><span style="font-size: 20px;"><span
+                                            style="font-family: Georgia;">В магазине "Sweetkey" Вы можете приобрести уникальный подарок. Мы занимаемся оригинальными подарками с 2008 года. За время работы мы приобрели опыт, обрели постоянных клиентов. Особенность нашего магазина подарков заключается в том, что у нас постоянно обновляется ассортимент, каждый месяц выходят новые (трендовые) подарки, набирающие популярность во всем мире.&nbsp;</span></span></span><span
+                                            style="text-align: center;" class="p"><span style="font-size: 20px;"><span
+                                            style="font-family: Georgia;">Мы постоянно развиваемся, интересуемся новинками, но и не забываем про давно полюбившиеся всем классические подарки. Если Вы думаете что подарить, то советуем Вам заглянуть в наш магазин оригинальных подарков. Вы с большой вероятностью найдёте себе то что нужно.</span></span></span><span
+                                            style="text-align: center;" class="p"><span
+                                            style="font-size: 20px;"><br></span></span><span class="p"><span
+                                            style="font-size: 20px;"><span style="font-family: Georgia;">С уважением, мастерская оригинальных подарков "Sweetkey".</span></span></span>
+                                    </h2></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <span class="plplink"></span>
+            </div>
+        </div>
+    </div>
 
 
     <div class="node node17 section section-clear" data-opacity="0.95">
@@ -23,10 +66,12 @@
                                                         <div class="wrapper1">
                                                             <div class="wrapper2">
                                                                 <div class="macros-button">
+                                                                {% with "cat/"|add:cat.cat_name as cat_url %}
                                                                     <div class="btn-out center xs-none"><a
                                                                             class="btn-inner"
-                                                                            href="{{ cat.cat_name }}"
+                                                                            href="{{ cat_url }}"
                                                                             target="_self">
+
                                                                         {% load static %}
                                                                         {% with "pics/"|add:cat.cat_pic_name|add:".png" as cat_pic_name %}
                                                                         <button class="btn font-text" id="uid16"
@@ -38,7 +83,9 @@
                                                                                 style="width: 309.12px;" class="">
                                                                         </button>
                                                                         {% endwith %}
-                                                                    </a></div>
+                                                                        </a>
+                                                                    </div>
+                                                                {% endwith %}
                                                                 </div>
                                                             </div>
                                                         </div>
