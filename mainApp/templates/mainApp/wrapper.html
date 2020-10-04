@@ -1612,16 +1612,16 @@
                                                     <div class="node node39 widget widget-image">
                                                         <div class="wrapper1">
                                                             <div class="wrapper2">
-{#                                                                <div class="bgimage"#}
-{#                                                                     style="height: 180px; background-position: center center; background-size: contain; background-image: url(&quot;//u10.plpstatic.ru/c98d35d8d7840318adcb26b7f3d8c2be/a76a97a2dead4a2ad4e6fa28bb8c0293.png&quot;);">#}
-{#                                                                    <img class=""#}
-{#                                                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"#}
-{#                                                                         alt="">#}
-{#                                                                </div>#}
-                                                                <noscript>
-                                                                    {% load static %}
-                                                                    <img src="{% static "Sweerkey_bakery.png" %}">
-                                                                </noscript>
+                                                                {% load static %}
+                                                                <div class="bgimage"
+                                                                     style="height: 180px; background-position: center center; background-size: contain; background-image: url({% static "Sweerkey_bakery.png" %};);">
+
+{#                                                                    <img src="">#}
+                                                                </div>
+{#                                                                <noscript>#}
+{#                                                                    {% load static %}#}
+{#                                                                    <img src="{% static "Sweerkey_bakery.png" %}">#}
+{#                                                                </noscript>#}
                                                             </div>
                                                         </div>
                                                     </div>
