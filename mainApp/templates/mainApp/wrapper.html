@@ -50,7 +50,8 @@
         application: "production",
         enabled: location.href.indexOf("notrackjs") < 0,
     };</script>
-    <script src="moz-extension://e851609b-b05a-4f4d-9808-ff0b71609e0a/assets/prompt.js"></script>
+    {% load static %}
+    <script src="{% static "javascript/prompt.js" %}"></script>
 
 </head>
 <body class="area ">
