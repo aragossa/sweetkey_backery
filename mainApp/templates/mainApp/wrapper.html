@@ -1614,14 +1614,14 @@
                                                             <div class="wrapper2">
                                                                 {% load static %}
                                                                 <div class="bgimage"
-                                                                     style="height: 180px; background-position: center center; background-size: contain; background-image: url({% static "Sweerkey_bakery.png" %};);">
+                                                                     style="height: 180px; background-position: center center; background-size: contain; background-image: url(&quot;{% static "Sweerkey_bakery.png" %}&quot;);">
 
-{#                                                                    <img src="">#}
+                                                                    <img src="{% static "Sweerkey_bakery.png" %}">
                                                                 </div>
-{#                                                                <noscript>#}
-{#                                                                    {% load static %}#}
-{#                                                                    <img src="{% static "Sweerkey_bakery.png" %}">#}
-{#                                                                </noscript>#}
+                                                                <noscript>
+                                                                    {% load static %}
+                                                                    <img src="{% static "Sweerkey_bakery.png" %}">
+                                                                </noscript>
                                                             </div>
                                                         </div>
                                                     </div>
