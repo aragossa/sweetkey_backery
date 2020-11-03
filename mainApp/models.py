@@ -7,7 +7,7 @@ class Products(models.Model):
     cat_name = models.TextField(verbose_name='cat_name')
     sub_cat_name = models.TextField(verbose_name='sub_cat_name')
     pic_name = models.TextField(verbose_name='pic_name')
-    prod_description = models.TextField(verbose_name='prod_desc')
+    prod_description = models.TextField(verbose_name='prod_desc', default=None)
 
     def __str__(self):
         return self.prod_name
