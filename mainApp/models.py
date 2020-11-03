@@ -8,6 +8,7 @@ class Products(models.Model):
     sub_cat_name = models.TextField(verbose_name='sub_cat_name')
     pic_name = models.TextField(verbose_name='pic_name')
     prod_description = models.TextField(verbose_name='prod_desc', default=None)
+    prod_price = models.FloatField(verbose_name='prod_price', default=None)
 
     def __str__(self):
         return self.prod_name

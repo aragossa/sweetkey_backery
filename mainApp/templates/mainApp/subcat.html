@@ -1,74 +1,56 @@
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
 
-<div class="node node51 section section-elements" id="catalog" data-opacity="0.95">
-    <div class="wrapper1">
-        <div class="wrapper2">
-            <div class="container">
-                <div class="s-elements-grid valign-top use-table">
-                    {% for prod in products %}
+<section class="shop_grid_area section-padding-80">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="shop_grid_product_area">
 
 
-                    <div class="s-elements-grid__cell cell-1">
-                        <div class="s-elements-grid__cellwrapper">
-                            <div class="cont cell">
-                                <div class="node node74 widget widget-element">
-                                    <div class="wrapper1">
-                                        <div class="wrapper2">
-                                            <div class="cont">
-                                                <div class="node node75 widget widget-image">
-                                                    <div class="wrapper1">
-                                                        <div class="wrapper2">
-                                                            {% load static %}
-                                                            {% with "pics/"|add:prod.pic_name as prod_pic_name %}
-                                                            <img
-                                                                    src="{% static prod_pic_name %}"
-                                                                    alt="">
-                                                            {% endwith %}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="node node76 widget widget-text cr-text">
-                                                    <div class="wrapper1">
-                                                        <div class="wrapper2">
-                                                            <div data-role="itemname" class="">
-                                                                <div data-role="itemname"
-                                                                     class="xs-force-center textable">
-                                                                    <p style="text-align: center;"><span
-                                                                            style="font-family: arial, helvetica, sans-serif; color: rgb(54, 54, 54);">
-                                                        <strong>{{ prod.prod_name }}</strong></span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="node node78 widget widget-text cr-text">
-                                                    <div class="wrapper1">
-                                                        <div class="wrapper2">
-                                                            <div data-role="itemprice" class="">
-                                                                <div data-role="itemprice"
-                                                                     class="xs-force-center textable">
-                                                                    <p style="text-align: center; line-height: 1;"><span
-                                                                            style="font-family: &quot;Yeseva One&quot;, chicago; font-size: 48px; color: rgb(54, 54, 54);">690
-                                                        <span style="font-size: 24px;">руб.</span></span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="row">
+
+                        {% for prod in products %}
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-product-wrapper">
+                                <!-- Product Image -->
+                                <div class="product-img">
+                                    {% load static %}
+                                    {% with "img/product-img/"|add:prod.pic_name as prod_pic_name %}
+                                    <img src="{% static prod_pic_name %}" alt="">
+                                    {% endwith %}
+                                    <!-- Hover Thumb -->
+                                    <!--                                        <img class="hover-img" src="img/product-img/product-2.jpg" alt="">-->
+
+                                </div>
+
+                                <!-- Product Description -->
+                                <div class="product-description">
+                                    {% with "prod/"|add:prod.prod_id as prod_url %}
+                                    <a href="{{ prod_url }}">
+                                        <h6>{{ prod.prod_name }}</h6>
+                                    </a>
+                                    {% endwith %}
+                                    <span>{{ prod.prod_description }}</span>
+
+                                    <p class="product-price">
+<!--                                        <span class="old-price">$75.00</span>-->
+                                        {{ prod.price }}</p>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
-                </div>
+                        {% endfor %}
 
+
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
-</div>
+</section>
+
+
 {% endblock %}
