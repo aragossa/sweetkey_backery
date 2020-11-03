@@ -29,8 +29,6 @@
                                 <div class="product-description">
                                     {% with "prod/"|add:prod.prod_id|stringformat:"i" as current_prod_url %}
 
-                                    <span>{{ prod.prod_id|stringformat:"i" }}</span>
-                                    <span>{{ current_prod_url }}</span>
                                     <a href="{{ current_prod_url }}">
                                         <h6>{{ prod.prod_name }}</h6>
                                     </a>
