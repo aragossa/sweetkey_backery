@@ -23,6 +23,7 @@
                                         <div class="wrapper2">
                                             {% load static %}
                                             {% with "pics/"|add:prod.pic_name as prod_pic_name %}
+                                                {{ prod_pic_name }}
                                                 <img
                                                     src="{% static prod_pic_name %}"
                                                     alt="">
