@@ -9,7 +9,7 @@
 
 
     {% for prod in products %}
-    <div>{{ prod.prod_name }}</div>
+
 
     <div class="s-elements-grid__cell cell-1">
         <div class="s-elements-grid__cellwrapper">
@@ -22,7 +22,7 @@
                                     <div class="wrapper1">
                                         <div class="wrapper2">
                                             {% load static %}
-                                            {% with "pics/"|add:prod.pic_name|add:".jpg" as prod_pic_name %}
+                                            {% with "pics/"|add:prod.pic_name as prod_pic_name %}
                                                 <img
                                                     src="{% static prod_pic_name %}"
                                                     alt="">
