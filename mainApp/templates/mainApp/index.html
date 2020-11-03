@@ -24,6 +24,7 @@
         <div class="row justify-content-center">
             {% for cat in categories %}
                 {{ cat.cat_ru_name }}
+                {{ cat.cat_pic_name }}
                 <div class="col-12 col-sm-6 col-md-4">
                     {% load static %}
                     {% with "img/bg-img/"|add:cat.cat_pic_name as cat_pic_name %}
