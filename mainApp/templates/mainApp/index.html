@@ -24,12 +24,15 @@
         <div class="row justify-content-center">
             {% for cat in categories %}
                 <div class="col-12 col-sm-6 col-md-4">
+                    {% load static %}
+                    {% with "img/bg-img/"|add:cat.cat_pic_name as cat_pic_name %}
                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                         style="background-image: url(img/bg-img/bg-2.jpg);">
+                         style="background-image: url({% static cat_pic_name %});">
                         <div class="catagory-content">
                             <a href="cat/{{ cat.cat_name }}">{{ cat.cat_ru_name }}</a>
                         </div>
                     </div>
+                    {% endwith %}
                 </div>
             {% endfor %}
 
