@@ -27,7 +27,7 @@
 
                                 <!-- Product Description -->
                                 <div class="product-description">
-                                    {% with "prod/"|add:prod.prod_id|stringformat:"i" as current_prod_url %}
+                                    {% with "prod/"|add:prod.prod_id|stringformat:'i' as current_prod_url %}
 
                                     <a href="{{ current_prod_url }}">
                                         <h6>{{ prod.prod_name }}</h6>
@@ -36,7 +36,7 @@
                                     <span>{{ prod.prod_description }}</span>
 
                                     <p class="product-price">
-<!--                                        <span class="old-price">$75.00</span>-->
+                                        <span class="old-price">12000.00</span>
                                         {{ prod.prod_price }} руб.</p>
 
                                 </div>
