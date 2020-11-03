@@ -16,6 +16,7 @@ class Products(models.Model):
 class Category(models.Model):
     cat_name = models.TextField(verbose_name='cat_name')
     cat_pic_name = models.TextField(verbose_name='cat_pic_name')
+    cat_ru_name = models.TextField(verbose_name='cat_ru_name', default=None)
 
     def __str__(self):
         return self.cat_name

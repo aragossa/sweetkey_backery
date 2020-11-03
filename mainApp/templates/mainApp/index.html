@@ -3,7 +3,8 @@
 
 
 {% load static %}
-<section class="welcome_area bg-img background-overlay" style="background-image: url({% static 'img/core-img/logo_big.png' %});">
+<section class="welcome_area bg-img background-overlay"
+         style="background-image: url({% static 'img/core-img/logo_big.png' %});">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
@@ -16,6 +17,25 @@
         </div>
     </div>
 </section>
+
+
+<div class="top_catagory_area section-padding-80 clearfix">
+    <div class="container">
+        <div class="row justify-content-center">
+            {{ for cat in categories}}
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
+                         style="background-image: url(img/bg-img/bg-2.jpg);">
+                        <div class="catagory-content">
+                            <a href="cat/{{ cat.cat_name }}">{{ cat.cat_ru_name }}</a>
+                        </div>
+                    </div>
+                </div>
+            {{ endfor }}
+
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
