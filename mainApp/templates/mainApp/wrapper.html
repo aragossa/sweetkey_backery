@@ -22,12 +22,13 @@
     <script src="moz-extension://e851609b-b05a-4f4d-9808-ff0b71609e0a/assets/prompt.js"></script>
 </head>
 <body>
-<header class="header_area sticky">
-    <div class="classy-nav-container d-flex align-items-center justify-content-between light left breakpoint-on">
+<!-- ##### Header Area Start ##### -->
+<header class="header_area">
+    <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
         <!-- Classy Menu -->
         <nav class="classy-navbar" id="essenceNav">
-            {% load static %}
-            <a class="nav-brand" href=""><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+            <!-- Logo -->
+            <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
                 <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -41,10 +42,10 @@
                 <!-- Nav Start -->
                 <div class="classynav">
                     <ul>
-                        <li class="megamenu-item"><a href="#">Shop</a>
+                        <li><a href="#">Shop</a>
                             <div class="megamenu">
                                 <ul class="single-mega cn-col-4">
-                                    <li class="title">Women"s Collection</li>
+                                    <li class="title">Women's Collection</li>
                                     <li><a href="shop.html">Dresses</a></li>
                                     <li><a href="shop.html">Blouses &amp; Shirts</a></li>
                                     <li><a href="shop.html">T-shirts</a></li>
@@ -52,7 +53,7 @@
                                     <li><a href="shop.html">Bras &amp; Panties</a></li>
                                 </ul>
                                 <ul class="single-mega cn-col-4">
-                                    <li class="title">Men"s Collection</li>
+                                    <li class="title">Men's Collection</li>
                                     <li><a href="shop.html">T-Shirts</a></li>
                                     <li><a href="shop.html">Polo</a></li>
                                     <li><a href="shop.html">Shirts</a></li>
@@ -60,7 +61,7 @@
                                     <li><a href="shop.html">Trench</a></li>
                                 </ul>
                                 <ul class="single-mega cn-col-4">
-                                    <li class="title">Kid"s Collection</li>
+                                    <li class="title">Kid's Collection</li>
                                     <li><a href="shop.html">Dresses</a></li>
                                     <li><a href="shop.html">Shirts</a></li>
                                     <li><a href="shop.html">T-shirts</a></li>
@@ -71,8 +72,8 @@
                                     <img src="img/bg-img/bg-6.jpg" alt="">
                                 </div>
                             </div>
-                            <span class="dd-trigger"></span><span class="dd-arrow"></span></li>
-                        <li class="cn-dropdown-item has-down pr12"><a href="#">Pages</a>
+                        </li>
+                        <li><a href="#">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="shop.html">Shop</a></li>
@@ -83,7 +84,7 @@
                                 <li><a href="regular-page.html">Regular Page</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
-                            <span class="dd-trigger"></span><span class="dd-arrow"></span></li>
+                        </li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -93,19 +94,19 @@
         </nav>
 
     </div>
-    {% load static %}
-    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
-    {% load static %}
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    {% load static %}
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    {% load static %}
-    <script src="{% static 'js/plugins.js' %}"></script>
-    {% load static %}
-    <script src="{% static 'js/active.js' %}"></script>
-    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"
-                                                                                                 aria-hidden="true"></i></a>
 </header>
+{% load static %}
+<script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+{% load static %}
+<script src="{% static 'js/popper.min.js' %}"></script>
+{% load static %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% load static %}
+<script src="{% static 'js/plugins.js' %}"></script>
+{% load static %}
+<script src="{% static 'js/active.js' %}"></script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"
+                                                                                             aria-hidden="true"></i></a>
 
 </body>
 </html>
