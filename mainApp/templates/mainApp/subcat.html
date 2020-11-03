@@ -1,20 +1,68 @@
-
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
 <div class="container mt-5">
 
 
-<!--    {% for subcat in subcategories %}-->
-<!--        <div>{{ subcat.sub_cat_name }}</div>-->
-<!--    {% endfor %}-->
+    <!--    {% for subcat in subcategories %}-->
+    <!--        <div>{{ subcat.sub_cat_name }}</div>-->
+    <!--    {% endfor %}-->
 
 
     {% for prod in products %}
-        <div>{{ prod.prod_name }}</div>
+    <div>{{ prod.prod_name }}</div>
+
+    <div class="s-elements-grid__cell cell-1">
+        <div class="s-elements-grid__cellwrapper">
+            <div class="cont cell">
+                <div class="node node74 widget widget-element">
+                    <div class="wrapper1">
+                        <div class="wrapper2">
+                            <div class="cont">
+                                <div class="node node75 widget widget-image">
+                                    <div class="wrapper1">
+                                        <div class="wrapper2">
+                                            {% load static %}
+                                            {% with "pics/"|add:prod.pic_name|add:".jpg" as prod_pic_name %}
+                                                <img
+                                                    src="{% static prod_pic_name %}"
+                                                    alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="node node76 widget widget-text cr-text">
+                                    <div class="wrapper1">
+                                        <div class="wrapper2">
+                                            <div data-role="itemname" class="">
+                                                <div data-role="itemname" class="xs-force-center textable">
+                                                    <p style="text-align: center;"><span
+                                                            style="font-family: arial, helvetica, sans-serif; color: rgb(54, 54, 54);">
+                                                        <strong>{{ prod.prod_name }}</strong></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="node node78 widget widget-text cr-text">
+                                    <div class="wrapper1">
+                                        <div class="wrapper2">
+                                            <div data-role="itemprice" class="">
+                                                <div data-role="itemprice" class="xs-force-center textable">
+                                                    <p style="text-align: center; line-height: 1;"><span
+                                                            style="font-family: &quot;Yeseva One&quot;, chicago; font-size: 48px; color: rgb(54, 54, 54);">690
+                                                        <span style="font-size: 24px;">руб.</span></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endfor %}
-
-
-
 
 
 </div>
