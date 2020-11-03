@@ -1,133 +1,21 @@
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
 
-    <div class="node node0 section section-clear" id="main" data-opacity="0.95">
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="container">
-                    <div class="cont">
 
-                        <div class="node node11 widget widget-text">
-                            <div class="wrapper1">
-                                <div class="wrapper2">
-                                    <div class="xs-scale-80">
-                                        <h1 class="font-header spans xs-force-center textable">
-                                            <span style="text-align: center;" class="p">
-                                                <span style="color: rgb(48, 0, 74);">
-                                                    <span style="font-size: 64px;">
-                                                        <span>Вкусное мыло и красивая выпечка</span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                            <span style="text-align: center;" class="p">
-                                                <span style="color: rgb(48, 0, 74);">
-                                                    <span style="font-size: 64px;">
-                                                        <span>Sweetkey</span>
-                                                    </span>
-                                                </span>
-                                            </span>
-
-
-
-
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="node node12 widget widget-text">
-                            <div class="wrapper1">
-                                <div class="wrapper2">
-                                    <div class=""><h2 class="spans xs-force-center textable">
-                                        <span style="text-align: center;" class="p">
-                                            <span style="font-size: 20px;">
-                                                <span style="font-family: Georgia;">Выбирайте в Sweetkey, не прогадаете.&nbsp;
-                                                </span>
-                                            </span>
-                                        </span>
-                                        <span style="text-align: center;" class="p">
-                                            <span style="font-size: 20px;"><br></span>
-                                        </span>
-                                        <div class="btn-out center">
-                                            <a class="btn-inner" href="https://www.instagram.com/sweetkey_bakery/" target="_self">
-                                                <button class="btn font-text" id="uid16" data-id=""
-                                                                                data-action="link" data-ym_goal=""
-                                                                                data-ga_category="" data-ga_action=""
-                                                                                need_hover="true">
-                                                    {% load static %}
-                                                    <img src="{% static "pics/insta.png" %}" style="width: 60px;" class="">
-                                                </button>
-                                            </a>
-                                        </div>
-                                    </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+{% load static %}
+<section class="welcome_area bg-img background-overlay" style="background-image: url({% static 'img/core-img/logo_big.png' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="hero-content">
+                    <h6>asoss</h6>
+                    <h2>New Collection</h2>
+                    <a href="#" class="btn essence-btn">view collection</a>
                 </div>
-                <span class="plplink"></span>
             </div>
         </div>
     </div>
+</section>
 
-
-    <div class="node node17 section section-clear" data-opacity="0.95">
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="container">
-                    <div class="cont">
-                        <div class="node node18 widget widget-menu">
-                            <div class="wrapper1">
-                                <div class="wrapper2">
-                                    <div class="w-menu-grid center">
-
-
-                                        {% for cat in categories %}
-                                            <div class="w-menu-grid__cell"
-                                                 style="padding-left: 5px; padding-right: 5px;">
-                                                <div class="cont cell">
-                                                    <div class="node node20 widget widget-menu-button">
-                                                        <div class="wrapper1">
-                                                            <div class="wrapper2">
-                                                                <div class="macros-button">
-                                                                {% with "cat/"|add:cat.cat_name as cat_url %}
-                                                                    <div class="btn-out center xs-none"><a
-                                                                            class="btn-inner"
-                                                                            href="{{ cat_url }}"
-                                                                            target="_self">
-
-                                                                        {% load static %}
-                                                                        {% with "pics/"|add:cat.cat_pic_name|add:".png" as cat_pic_name %}
-                                                                        <button class="btn font-text" id="uid16"
-                                                                                data-id=""
-                                                                                data-action="link" data-ym_goal=""
-                                                                                data-ga_category="" data-ga_action=""
-                                                                                need_hover="true"><img
-                                                                                src="{% static cat_pic_name %}"
-                                                                                style="width: 309.12px;" class="">
-                                                                        </button>
-                                                                        {% endwith %}
-                                                                        </a>
-                                                                    </div>
-                                                                {% endwith %}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        {% endfor %}
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <span class="plplink"></span></div>
-        </div>
-    </div>
 
 {% endblock %}
